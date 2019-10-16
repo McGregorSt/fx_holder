@@ -6,14 +6,19 @@ import * as actions from '../../store/actions/index'
 
 class TransactionsDisplay extends Component {
     
+    removeTransHandler = (id) => {
+        this.props.onRemove(id)
+    }
+
+
     render() {
-        const transactions = this.props.transactions.map(tr => (
+        const transactions = this.props.transactions.map((tr, id) => (
             <Transaction 
                 key={tr.name+tr.amount+tr.rate}
                 name={tr.name}
                 amount={tr.amount}
                 pln={tr.pln}
-                clicked={this.props.onRemove}
+                clicked={() => this.removeTransHandler(id)}
                 />
         ))
         return (
@@ -31,8 +36,8 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = dispatch => {
     return {
-        onRemove: (transId) => dispatch()
+        onRemove: (id) => dispatch(actions.removeTransaction(id))
     }
 }
 
-export default connect(mapStateToProps) (TransactionsDisplay)
+export default connect(mapStateToProps, mapDispatchToProps) (TransactionsDisplay)

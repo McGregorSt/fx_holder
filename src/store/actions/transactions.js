@@ -17,7 +17,7 @@ export const addTransaction = (transaction) => {
 export const removeTransaction = (id) => {
     return {
         type: actionTypes.DEL_TRANSACTION,
-        transId: id
+        id: id
     }
 }
 

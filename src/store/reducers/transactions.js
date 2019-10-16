@@ -30,26 +30,24 @@ const addTransaction = (state, action) => {
 
 
 const removeTransaction = (state, action) => {
-
+    const transactions = [...state.transactions]
+    transactions.splice(action.id, 1)
+    return updateObject(state, {
+        transactions: transactions
+    })
 }
 
 const recalcTransaction = (state, action) => {
-    console.log(state.transactions)
     const updatedTransactions = state.transactions.map(tr => {
         return updateObject(tr, {
             pln: (tr.amount * action.rate).toFixed(2)
         })
     })
-    // return updateObject(state, {
-    //     transactions: updateObject(state.transactions, updatedTransactions)
-    // })
     return updateObject(state, {
         transactions: updatedTransactions
     })    
 
 }
-
-
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
