@@ -20,7 +20,6 @@ class Summary extends Component {
             return acc + cur
         }, 0)
 
-        console.log(totalEur, totalPln)
 
         return (
             <div className={classes.Summary}>
@@ -28,10 +27,10 @@ class Summary extends Component {
                     <strong>{ numbOfTrans }</strong>
                 </span>
                 <span>Total amount EUR
-                    <strong>{ Number(totalEur).toFixed(2) }</strong>
+                    <strong>{ Number(totalEur).toLocaleString('pl-PL', {maximumFractionDigits:2}) }</strong>
                 </span>
                 <span>Total amount PLN
-                    <strong>{ Number(totalPln).toFixed(2) }</strong>
+                    <strong>{ Number(totalPln).toLocaleString('pl-PL', {maximumFractionDigits:2}) }</strong>
                 </span>
             </div>
         )

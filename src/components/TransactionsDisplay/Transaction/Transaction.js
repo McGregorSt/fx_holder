@@ -12,11 +12,11 @@ const Transaction = (props) => (
         <div className={classes.TransDataBtm}>
             <div className={classes.TransDataBtmAmount}>
                 <div className={classes.TransDetails}>Amount EUR </div>
-                <div className={classes.TransData}>{props.amount}</div>
+                <div className={classes.TransData}>{Number(props.amount).toLocaleString(undefined, {maximumFractionDigits:2})}</div>
             </div>
             <div className={classes.TransDataBtmAmount}>
                 <div className={classes.TransDetails}>Amount PLN </div>
-                <div className={classes.TransData}>{props.pln}</div>
+                <div className={classes.TransData}>{Number(props.pln).toLocaleString(undefined, {maximumFractionDigits:2})}</div>
             </div>
         </div>
     </div>

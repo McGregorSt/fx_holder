@@ -8,7 +8,10 @@ const Input = (props) => {
             <input 
                 className={classes.Input}
                 placeholder={props.placeholder}
-                onChange={props.changed} />
+                maxLength={props.maxLength}
+                type={props.type}
+                onChange={props.changed}
+                />
         </div>
     )
 }

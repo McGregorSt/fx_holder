@@ -7,6 +7,8 @@ const AmountInput = (props) => (
     <div>
         <Input
             style={classes.Input}
+            type={props.type}
+            value={props.value}
             placeholder='amount'
             changed={props.changed} />
     </div>

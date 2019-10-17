@@ -16,6 +16,7 @@ class NameInput extends Component {
                     placeholder='name of transaction'
                     style={classes.Input}
                     changed={this.props.changed}
+                    maxLength='20'
                 />
             </div>
         )

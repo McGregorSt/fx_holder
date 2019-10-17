@@ -1,5 +1,3 @@
-.RateInput {
-    /* height: 36px;
-    width: 50%; */
-    /* text-align: center; */
+.RateInput input {
+    width: 150px;
 }

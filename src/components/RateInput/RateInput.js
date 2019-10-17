@@ -9,26 +9,46 @@ import * as actions from '../../store/actions/index'
 
 class RateInput extends Component {
 
+    state = { 
+        valid: true
+    }
+
     rateHandler = ev => {
         const rate = ev.target.value
         this.props.onRate(rate)
         this.props.onRecalc(rate)
     }
 
+    validationCheck = (ev) => {
+        const rate = ev.target.value
+        console.log([...rate].includes(','))
+        if ([...rate].includes(',')) {
+            this.setState({ valid: false })
+        } else {
+            this.setState({ valid: true })
+        }
+    }
     render() {
+        let message = null
+        if (!this.state.valid) {
+            message = (
+                <span style={{ fontSize: '10px', color: 'red' }}>USE dot, not comma</span>
+            )
+            
+        }
         return (
-            <div className={classes.RateInput}>
+            <div >
                 <h3>Put your rate here:</h3>
-                <form onBlur={this.rateHandler}>
-                    <div>
-                        <Input
-                            // style={classes.Input}
-                            placeholder='rate' 
+                    <form onBlur={this.rateHandler} onChange={this.validationCheck}>
+                        <div className={classes.RateInput}>
+                            <Input
+                                placeholder='rate'
+                                // type='number'
+                                maxLength='6'
                             />
-                    </div>
-                    {/* <Submit value='Rate it' /> */}
-                </form>
-
+                        </div>
+                    </form>
+                    { message }
             </div>
         )
     }
@@ -47,4 +67,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps) (RateInput)
+export default connect(mapStateToProps, mapDispatchToProps)(RateInput)

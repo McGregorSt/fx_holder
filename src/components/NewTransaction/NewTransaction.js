@@ -11,13 +11,15 @@ class NewTransaction extends Component {
 
     state = {
         name: '',
-        amount: 0
+        amount: 0,
+        valid: true
     }
 
     nameHandler = (ev) => {
         this.setState({ name: ev.target.value })
     }
     amountHandler = (ev) => {
+        this.validationCheck(ev)
         this.setState({ amount: ev.target.value })
     }
     addTransactionHandler = ev => {
@@ -27,14 +29,35 @@ class NewTransaction extends Component {
             amount: this.state.amount
         }
         this.props.onAddIt(transaction)
+        const form = document.querySelectorAll('#form input')
+        form[0].value = ''
+        form[1].value = ''
+    }
+    validationCheck = (ev) => {
+        const amount = ev.target.value
+        if ([...amount].includes(',')) {
+            this.setState({ valid: false })
+        } else {
+            this.setState({ valid: true })
+        } 
     }
 
     render() {
+        console.log(this.state.valid)
+        let message = null
+        if (!this.state.valid) {
+            message = (
+                <span style={{ fontSize: '10px', color: 'red' }}>USE dot, not comma</span>
+            )
+            
+        }
         return (
             <div className={classes.NewTransaction}>
-                <form onSubmit={this.addTransactionHandler}>
+                <form id='form' onSubmit={this.addTransactionHandler}>
                     <NameInput changed={this.nameHandler} />
-                    <AmountInput changed={this.amountHandler} />
+                    <AmountInput changed={this.amountHandler} 
+                        />
+                        { message }
                     <Submit value='Add it'
                     />
                 </form>
