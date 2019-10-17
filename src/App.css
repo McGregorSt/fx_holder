@@ -15,3 +15,13 @@ body {
   background-color: rgb(255, 220, 160);
   margin-bottom: 50px;
 }
+
+@media (max-width: 500px) {
+  .Header {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .Transactions {
+    flex-direction: column-reverse;
+  }
+}
