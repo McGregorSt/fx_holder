@@ -1,6 +1,20 @@
+body {
+  background-color: orange;
+}
 .Header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-flow: row-reverse;
   padding: 30px;
+  background-color: rgba(255, 175, 30, 0.9);
+}
+.Transactions {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  background-color: orange;
+}
+.Summary {
+  /* display: flex;
+  justify-content: space-between; */
 }

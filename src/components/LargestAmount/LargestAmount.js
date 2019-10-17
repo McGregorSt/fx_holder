@@ -4,14 +4,31 @@ import { connect } from 'react-redux'
 import Transaction from '../TransactionsDisplay/Transaction/Transaction'
 
 class LargestAmount extends Component {
- render () {
-     const largeAmount = this.props.transactions
-     return (
-        <div>
-            <Transaction />
-        </div>
-    )
- }
+    render() {
+        const sortedTrans = this.props.transactions.sort((a, b) => {
+            return b.amount - a.amount
+        })
+        const largeTrans = sortedTrans[0]
+        console.log(largeTrans);
+
+        let transaction = null
+
+        if (sortedTrans.length) {
+            transaction = (
+                <Transaction
+                    name={largeTrans.name}
+                    amount={largeTrans.amount}
+                    pln={largeTrans.pln}
+                />
+            )
+        }
+        return (
+            <div>
+                <h3>Largest transaction:</h3>
+                { transaction }
+            </div>
+        )
+    }
 }
 const mapStateToProps = state => {
     return {
@@ -19,4 +36,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps) (LargestAmount)
+export default connect(mapStateToProps)(LargestAmount)

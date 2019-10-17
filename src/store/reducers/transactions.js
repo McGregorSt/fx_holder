@@ -8,7 +8,11 @@ const initialState = {
         amount: null,
         pln: null
     },
-    transactions: []
+    transactions: [{
+        name: 'nuhsdall jshdjahjdhakj jshjdhakj',
+        amount: 322181728973,
+        pln: 3400087287
+    }]
 }
 
 const addRate = (state, action) => {

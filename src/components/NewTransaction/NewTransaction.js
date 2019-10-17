@@ -5,6 +5,7 @@ import * as actions from '../../store/actions/index'
 import NameInput from './NameInput/NameInput'
 import AmountInput from './AmountInput/AmountInput'
 import Submit from '../UI/Submit/Submit'
+import classes from './NewTransaction.css'
 
 class NewTransaction extends Component {
 
@@ -30,12 +31,11 @@ class NewTransaction extends Component {
 
     render() {
         return (
-            <div>
+            <div className={classes.NewTransaction}>
                 <form onSubmit={this.addTransactionHandler}>
                     <NameInput changed={this.nameHandler} />
                     <AmountInput changed={this.amountHandler} />
                     <Submit value='Add it'
-                        // clicked={() => this.props.onAddIt(this.state.name, this.state.amount)}
                     />
                 </form>
 

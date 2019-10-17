@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import classes from './Input.css'
 
 const Input = (props) => {
     return (
-        <div >
-            <input className={props.style}
+        <div>
+            <input 
+                className={classes.Input}
                 placeholder={props.placeholder}
                 onChange={props.changed} />
         </div>

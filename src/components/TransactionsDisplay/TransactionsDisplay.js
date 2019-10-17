@@ -23,6 +23,7 @@ class TransactionsDisplay extends Component {
         ))
         return (
             <div>
+                <h3>Your transactions:</h3>
                 { transactions }
             </div>
         )

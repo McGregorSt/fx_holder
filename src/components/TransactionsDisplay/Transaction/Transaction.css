@@ -1,3 +1,42 @@
-.TransactionList {
-    list-style: none;
+.Transaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color:inherit;
+    box-shadow: -1px 0px 26px -2px rgba(230,139,28,1);
+    height: 100px;
+    width: 400px;
+    margin-top: 15px;
+}
+
+.TransDetails {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    font-size: 10px;
+    /* align-self: center; */
+}
+.TransDetails:nth-child(1) {
+    align-self: center;
+}
+.TransDataTop {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+.TransDataBtm {
+    display: flex;
+    justify-content: space-around;
+}
+
+.TransDataBtmAmount {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.TransData {
+    font-size: 18px;
+    font-weight: 550;
+    align-self: center;
 }

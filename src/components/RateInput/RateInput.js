@@ -11,20 +11,18 @@ class RateInput extends Component {
 
     rateHandler = ev => {
         const rate = ev.target.value
-        console.log(rate)
         this.props.onRate(rate)
         this.props.onRecalc(rate)
-        console.log(this.props.transactions)
     }
 
     render() {
         return (
             <div className={classes.RateInput}>
-                EUR --> PLN
+                <h3>Put your rate here:</h3>
                 <form onBlur={this.rateHandler}>
                     <div>
                         <Input
-                            style={classes.Input}
+                            // style={classes.Input}
                             placeholder='rate' 
                             />
                     </div>

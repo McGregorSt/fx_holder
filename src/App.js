@@ -5,17 +5,23 @@ import RateInput from './components/RateInput/RateInput'
 import NewTransaction from './components/NewTransaction/NewTransaction'
 import classes from './App.css'
 import TransactionsDisplay from './components/TransactionsDisplay/TransactionsDisplay';
+import LargestAmount from './components/LargestAmount/LargestAmount';
+import Summary from './components/Summary/Summary';
 
 function App() {
   return (
     <div>
-      <div className={classes.Header}>
-        <RateInput />
+      <header className={classes.Header}>
         <NewTransaction />
-      </div>
-      <div>
+        <RateInput />
+      </header>
+      <main className={classes.Transactions}>
         <TransactionsDisplay />
-      </div>
+        <LargestAmount />
+      </main>
+      <footer className={classes.Summary}>
+        <Summary />
+      </footer>
     </div>
   );
 }
