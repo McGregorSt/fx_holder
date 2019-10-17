@@ -10,7 +10,7 @@ const Submit = (props) => (
             value={props.value}
             onClick={props.clicked}
             className={classes.Submit}
-             />
+        />
     </div>
 )
 

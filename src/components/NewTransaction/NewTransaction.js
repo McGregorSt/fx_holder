@@ -39,25 +39,24 @@ class NewTransaction extends Component {
             this.setState({ valid: false })
         } else {
             this.setState({ valid: true })
-        } 
+        }
     }
 
     render() {
-        console.log(this.state.valid)
         let message = null
         if (!this.state.valid) {
             message = (
                 <span style={{ fontSize: '10px', color: 'red' }}>USE dot, not comma</span>
             )
-            
+
         }
         return (
             <div className={classes.NewTransaction}>
                 <form id='form' onSubmit={this.addTransactionHandler}>
                     <NameInput changed={this.nameHandler} />
-                    <AmountInput changed={this.amountHandler} 
-                        />
-                        { message }
+                    <AmountInput changed={this.amountHandler}
+                    />
+                    {message}
                     <Submit value='Add it'
                     />
                 </form>

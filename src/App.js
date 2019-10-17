@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 
 import RateInput from './components/RateInput/RateInput'
 import NewTransaction from './components/NewTransaction/NewTransaction'

@@ -45,7 +45,7 @@ const recalcTransaction = (state, action) => {
     })
     return updateObject(state, {
         transactions: updatedTransactions
-    })    
+    })
 
 }
 

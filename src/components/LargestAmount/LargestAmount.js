@@ -5,11 +5,10 @@ import Transaction from '../TransactionsDisplay/Transaction/Transaction'
 
 class LargestAmount extends Component {
     render() {
-        const sortedTrans = this.props.transactions.sort((a, b) => {
+        const sortedTrans = [...this.props.transactions].sort((a, b) => {
             return b.amount - a.amount
         })
         const largeTrans = sortedTrans[0]
-        console.log(largeTrans);
 
         let transaction = null
 
@@ -25,7 +24,7 @@ class LargestAmount extends Component {
         return (
             <div>
                 <h3>Largest transaction:</h3>
-                { transaction }
+                {transaction}
             </div>
         )
     }

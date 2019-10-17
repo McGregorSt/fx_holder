@@ -24,13 +24,13 @@ class Summary extends Component {
         return (
             <div className={classes.Summary}>
                 <span>No. of transactions
-                    <strong>{ numbOfTrans }</strong>
+                    <strong>{numbOfTrans}</strong>
                 </span>
                 <span>Total amount EUR
-                    <strong>{ Number(totalEur).toLocaleString('pl-PL', {maximumFractionDigits:2}) }</strong>
+                    <strong>{Number(totalEur).toLocaleString('pl-PL', { maximumFractionDigits: 2 })}</strong>
                 </span>
                 <span>Total amount PLN
-                    <strong>{ Number(totalPln).toLocaleString('pl-PL', {maximumFractionDigits:2}) }</strong>
+                    <strong>{Number(totalPln).toLocaleString('pl-PL', { maximumFractionDigits: 2 })}</strong>
                 </span>
             </div>
         )
