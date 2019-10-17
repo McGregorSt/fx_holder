@@ -1,4 +1,4 @@
-This app is a holder for your FX transaction. After you put a rate, your transactions will be recalculated into PLN. It's SPA built with React and Redux, styled with css modules.
+This app is a holder for your FX transaction. You can add transactions, delete them and see summary of it all. After you put a rate, your transactions will be recalculated into PLN. It's SPA built with React and Redux, styled with css modules.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
