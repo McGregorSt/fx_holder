@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: space-around;
     background-color:inherit;
-    box-shadow: -1px 0px 26px -2px rgba(230,139,28,1);
+    color: #aaa;
+    box-shadow: -1px 0px 26px -2px rgba(255, 68, 0, 0.5);
     height: 100px;
     width: 400px;
     margin-top: 15px;

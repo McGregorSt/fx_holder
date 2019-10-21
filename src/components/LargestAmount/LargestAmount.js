@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import Transaction from '../TransactionsDisplay/Transaction/Transaction'
+import classes from './LargestAmount.css'
 
 class LargestAmount extends Component {
     render() {
@@ -22,7 +23,7 @@ class LargestAmount extends Component {
             )
         }
         return (
-            <div>
+            <div className={classes.LargestAmountHeader}>
                 <h3>Largest transaction:</h3>
                 {transaction}
             </div>

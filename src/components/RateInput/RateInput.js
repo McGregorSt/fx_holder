@@ -35,10 +35,10 @@ class RateInput extends Component {
 
         }
         return (
-            <div >
+            <div className={classes.RateInput}>
                 <h3>Put your rate here:</h3>
                 <form onBlur={this.rateHandler} onChange={this.validationCheck}>
-                    <div className={classes.RateInput}>
+                    <div >
                         <Input
                             placeholder='rate'
                             // type='number'

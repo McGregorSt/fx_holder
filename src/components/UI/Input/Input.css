@@ -3,19 +3,19 @@
     width: 372px;
     font-family: 'Exo 2';
     font-size: 16px;
-    color: rgba(182, 50, 2, 0.9);
+    color: orangered;
     text-align: center;
-    background-color: rgba(255, 175, 30, 0.05);
+    background-color: rgba(255, 68, 0, 0.005);
     border: 0;
-    border-bottom: 2px solid rgba(255, 68, 0, 0.4);
+    border-bottom: 2px solid rgba(255, 68, 0, 0.6);
     margin-top: 10px;
     
 }
 .Input::placeholder {
-    color: rgba(182, 50, 2, 0.5);
+    color: rgba(255, 68, 0, 0.6);
     font-size: 14px;
 }
 .Input:focus {
     outline: none;
-    box-shadow: -1px 0px 26px -2px rgba(230,139,28,1);
+    box-shadow: -1px 0px 26px -2px rgba(255, 68, 0, 0.5);
 }

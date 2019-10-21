@@ -1,3 +1,6 @@
 .RateInput input {
     width: 150px;
 }
+.RateInput h3 {
+    color: #aaa;
+}
